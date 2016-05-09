@@ -35,28 +35,28 @@ void
     /* Claim access */
     if (ioctl(pport, PPCLAIM) < 0)
     {
-        mexPrintf("PPCLAIM ioctl Error : %s (%d)\n",strerror(errno),errno);
+//         mexPrintf("PPCLAIM ioctl Error : %s (%d)\n",strerror(errno),errno);
         mexErrMsgTxt("PPCLAIM ioctl Error");
     }
     
     /* Send the message */
     if (ioctl (pport, PPWDATA, &trigger) < 0)
     {
-        mexPrintf("PPWDATA ioctl Error : %s (%d)\n",strerror(errno),errno);
+//         mexPrintf("PPWDATA ioctl Error : %s (%d)\n",strerror(errno),errno);
         mexErrMsgTxt("PPWDATA ioctl Error \n");
     }
     
     /* Release access */
     if (ioctl(pport, PPRELEASE) < 0)
     {
-        mexPrintf("PPRELEASE ioctl Error : %s (%d)\n",strerror(errno),errno);
+//         mexPrintf("PPRELEASE ioctl Error : %s (%d)\n",strerror(errno),errno);
         mexErrMsgTxt("PPRELEASE ioctl Error\n");
     }
     
     /* Close file */
     if(close(pport) < 0)
     {
-        mexPrintf("Close Error : %s (%d)\n",strerror(errno),errno);
+//         mexPrintf("Close Error : %s (%d)\n",strerror(errno),errno);
         mexErrMsgTxt("Close Error\n");
     }
     

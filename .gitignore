@@ -39,3 +39,7 @@
 
 # MATLAB mex files
 *.mex*
+
+# MATLAB autosave files
+*.asv
+*~
