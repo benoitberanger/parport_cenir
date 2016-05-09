@@ -1,3 +1,9 @@
+# Ignore all
+*
+
+# Unignore all with extentions
+!*.*
+
 # Object files
 *.o
 *.ko
@@ -30,3 +36,6 @@
 
 # Debug files
 *.dSYM/
+
+# MATLAB mex files
+*.mex*
