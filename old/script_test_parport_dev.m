@@ -7,6 +7,7 @@ clc
 % Check if Psychtoolbox is installed
 assert( ~isempty(which('PsychtoolboxVersion')) , 'Psychtoolbox not detected' );
 
+
 %% Send pulses
 
 msg = 255;
@@ -22,14 +23,12 @@ while ~KbCheck
     fprintf('Sending pulse #%d \n',pulse)
     
     parport_dev(msg);
-%     parport_adr(msg);
-
+    
     WaitSecs(0.001);
     
     parport_dev(0);
-%     parport_adr(0);
     
-    WaitSecs(0.500);
+    WaitSecs(0.020);
     
 end
 
