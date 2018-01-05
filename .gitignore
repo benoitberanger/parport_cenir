@@ -4,3 +4,5 @@
 # MATLAB autosave files
 *.asv
 *~
+
+*.o
